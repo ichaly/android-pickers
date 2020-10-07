@@ -282,7 +282,8 @@ public class LinkagePicker extends WheelPicker {
             thirdView.setLineConfig(lineConfig);
             thirdView.setAdapter(new ArrayWheelAdapter<>(provider.provideThirdData(selectedFirstIndex, selectedSecondIndex)));
             thirdView.setCurrentItem(selectedThirdIndex);
-
+            thirdView.setLayoutParams(wheelParams2);
+            layout.addView(thirdView);
             if (!TextUtils.isEmpty(thirdLabel)){
                 if(isOuterLabelEnable()){
                     TextView labelView = new TextView(activity);
